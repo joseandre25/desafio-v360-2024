@@ -21,4 +21,6 @@ nav:
     - Visão de Produto: requisitos/visao-de-produto.md
     - Requisitos Funcionais: requisitos/requisitos-funcionais.md
     - Requisitos Não Funcionais: requisitos/requisitos-nao-funcionais.md
-  - Macrocronograma de Implantação: macrocronograma/macrocronograma-implantacao.md
+  - Macrocronograma de Implantação:
+    - Backlog: macrocronograma/backlog.md
+    - Macrocronograma: macrocronograma/macrocronograma-implantacao.md
