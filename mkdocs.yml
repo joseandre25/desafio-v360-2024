@@ -12,14 +12,13 @@ theme:
   font:
     text: "Roboto"
     code: "Roboto Mono"
-  favicon: assets/favicon.ico
-  logo: assets/logo.ico
 
 nav:
   - Descrição do Desafio: index.md
   - Requisitos Levantados:
     - Visão de Produto: requisitos/visao-de-produto.md
     - Requisitos Funcionais: requisitos/requisitos-funcionais.md
+    - Personas: requisitos/personas.md
     - Requisitos Não Funcionais: requisitos/requisitos-nao-funcionais.md
   - Macrocronograma de Implantação:
     - Backlog: macrocronograma/backlog.md

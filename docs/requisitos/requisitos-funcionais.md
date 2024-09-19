@@ -1,7 +1,7 @@
-## Requisitos Funcionais
+## Requisitos Funcionais - Features
 Esta seção detalha os requisitos funcionais organizados por recursos principais do sistema.
 
-### **RF01** – Agendamento de Entregas
+### **RF01** – Agendamento de Entregas (FT01)
 O sistema deve permitir que os usuários agendem entregas no Centro de Distribuição (CD), com a
 possibilidade de selecionar a data e horário de entrega. Esse agendamento deve incluir o nome do
 fornecedor, o tipo de material a ser entregue e a quantidade correspondente.
@@ -17,7 +17,7 @@ entregue.<br>
 
 ---
 
-### **RF02** – Validação de Capacidade do Pátio e Docas
+### **RF02** – Validação de Capacidade do Pátio e Docas (FT02)
 O sistema deve validar se há espaço disponível no pátio e nas docas para confirmar um agendamento de
 entrega. Caso não haja espaço, o sistema deve sugerir um novo horário ou data para a entrega.
 
@@ -32,7 +32,7 @@ agendamento.
 
 ---
 
-### **RF03** – Visibilidade em Tempo Real de Capacidade
+### **RF03** – Visibilidade em Tempo Real de Capacidade (FT03)
 O sistema deve exibir em tempo real a capacidade atual das docas e do pátio, mostrando quais áreas estão
 ocupadas e quais estão disponíveis para novas entregas.
 
@@ -47,7 +47,7 @@ segundos.<br>
 
 ---
 
-### **RF04** – Notificações Automáticas
+### **RF04** – Notificações Automáticas (FT04)
 O sistema deve enviar notificações automáticas para os usuários responsáveis (equipe de recebimento,
 logística e suprimentos) sempre que houver alterações nos horários de entrega, cancelamentos ou qualquer
 mudança relevante.
@@ -62,7 +62,7 @@ impactos negativos no fluxo de trabalho.
 
 ---
 
-### **RF05** – Priorização de Entregas
+### **RF05** – Priorização de Entregas (FT05)
 O sistema deve permitir que os usuários atribuam prioridades às entregas, com base na urgência e na
 importância dos materiais, para garantir que materiais críticos sejam recebidos de forma prioritária.
 
@@ -76,7 +76,7 @@ materiais essenciais.
 
 ---
 
-### **RF06** – Geração de Relatórios de Utilização
+### **RF06** – Geração de Relatórios de Utilização (FT06)
 O sistema deve gerar relatórios periódicos sobre a utilização do pátio e das docas, incluindo métricas como
 tempo médio de espera dos caminhões, ociosidade das docas e número de entregas realizadas.
 
@@ -91,7 +91,7 @@ utilização do espaço.
 
 ---
 
-### **RF07** – Definição de Janelas de Horários Permitidos
+### **RF07** – Definição de Janelas de Horários Permitidos (FT07)
 O sistema deve permitir a configuração de janelas de horário permitidas para entrega, respeitando o horário
 de funcionamento do CD, com a possibilidade de bloquear agendamentos fora do expediente ou solicitar
 aprovação especial.
@@ -106,7 +106,7 @@ horário regular de trabalho.
 
 ---
 
-### **RF08** – Reorganização da Fila de Entregas
+### **RF08** – Reorganização da Fila de Entregas (FT08)
 O sistema deve reorganizar a fila de entregas conforme as prioridades estabelecidas pelos usuários.
 Entregas com maior prioridade devem ser tratadas com maior urgência, e o sistema deve ajustar a ordem de
 descarregamento automaticamente.
@@ -122,7 +122,7 @@ atribuída a cada entrega.<br>
 
 ---
 
-### **RF09** – Relatórios de Entregas Atrasadas ou Fora do Horário
+### **RF09** – Relatórios de Entregas Atrasadas ou Fora do Horário (FT09)
 O sistema deve gerar relatórios sobre entregas que ocorreram fora do horário agendado ou que chegaram
 com atraso, incluindo o impacto financeiro causado por horas extras ou outras medidas corretivas.
 
@@ -137,7 +137,7 @@ horário.<br>
 
 ---
 
-### **RF10** – Consulta e Monitoramento de Entregas Programadas
+### **RF10** – Consulta e Monitoramento de Entregas Programadas (FT10)
 O sistema deve permitir que os usuários consultem uma lista de todas as entregas programadas, com a
 possibilidade de visualizar o status de cada uma (pendente, em trânsito, entregue, atrasada, etc.) e
 acompanhar em tempo real.
