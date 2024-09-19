@@ -1,0 +1,792 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../visao-de-produto/">
+      
+      
+        <link rel="next" href="../requisitos-nao-funcionais/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>Requisitos Funcionais - José André Rabelo | Desafio Técnico - V360</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#requisitos-funcionais" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="José André Rabelo | Desafio Técnico - V360" class="md-header__button md-logo" aria-label="José André Rabelo | Desafio Técnico - V360" data-md-component="logo">
+      
+  <img src="../../assets/logo.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            José André Rabelo | Desafio Técnico - V360
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Requisitos Funcionais
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="José André Rabelo | Desafio Técnico - V360" class="md-nav__button md-logo" aria-label="José André Rabelo | Desafio Técnico - V360" data-md-component="logo">
+      
+  <img src="../../assets/logo.ico" alt="logo">
+
+    </a>
+    José André Rabelo | Desafio Técnico - V360
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Descrição do Desafio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Requisitos Levantados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Requisitos Levantados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-de-produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão de Produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Requisitos Funcionais
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Funcionais
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Funcionais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requisitos Funcionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rf01-agendamento-de-entregas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF01 – Agendamento de Entregas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf02-validacao-de-capacidade-do-patio-e-docas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF02 – Validação de Capacidade do Pátio e Docas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf03-visibilidade-em-tempo-real-de-capacidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF03 – Visibilidade em Tempo Real de Capacidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf04-notificacoes-automaticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF04 – Notificações Automáticas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf05-priorizacao-de-entregas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF05 – Priorização de Entregas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf06-geracao-de-relatorios-de-utilizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF06 – Geração de Relatórios de Utilização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf07-definicao-de-janelas-de-horarios-permitidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF07 – Definição de Janelas de Horários Permitidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf08-reorganizacao-da-fila-de-entregas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF08 – Reorganização da Fila de Entregas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf09-relatorios-de-entregas-atrasadas-ou-fora-do-horario" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF09 – Relatórios de Entregas Atrasadas ou Fora do Horário
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf10-consulta-e-monitoramento-de-entregas-programadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF10 – Consulta e Monitoramento de Entregas Programadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos-nao-funcionais/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Não Funcionais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../macrocronograma/macrocronograma-implantacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macrocronograma de Implantação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Funcionais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requisitos Funcionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rf01-agendamento-de-entregas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF01 – Agendamento de Entregas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf02-validacao-de-capacidade-do-patio-e-docas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF02 – Validação de Capacidade do Pátio e Docas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf03-visibilidade-em-tempo-real-de-capacidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF03 – Visibilidade em Tempo Real de Capacidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf04-notificacoes-automaticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF04 – Notificações Automáticas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf05-priorizacao-de-entregas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF05 – Priorização de Entregas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf06-geracao-de-relatorios-de-utilizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF06 – Geração de Relatórios de Utilização
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf07-definicao-de-janelas-de-horarios-permitidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF07 – Definição de Janelas de Horários Permitidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf08-reorganizacao-da-fila-de-entregas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF08 – Reorganização da Fila de Entregas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf09-relatorios-de-entregas-atrasadas-ou-fora-do-horario" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF09 – Relatórios de Entregas Atrasadas ou Fora do Horário
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf10-consulta-e-monitoramento-de-entregas-programadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      RF10 – Consulta e Monitoramento de Entregas Programadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Requisitos Funcionais</h1>
+
+<h2 id="requisitos-funcionais">Requisitos Funcionais</h2>
+<p>Esta seção detalha os requisitos funcionais organizados por recursos principais do sistema.</p>
+<h3 id="rf01-agendamento-de-entregas"><strong>RF01</strong> – Agendamento de Entregas</h3>
+<p>O sistema deve permitir que os usuários agendem entregas no Centro de Distribuição (CD), com a
+possibilidade de selecionar a data e horário de entrega. Esse agendamento deve incluir o nome do
+fornecedor, o tipo de material a ser entregue e a quantidade correspondente.</p>
+<p><strong>Justificativa:</strong><br />
+Permitir o agendamento antecipado de entregas garante organização e previsibilidade no fluxo de
+caminhões no CD, facilitando a alocação de espaço e recursos.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- O usuário deve poder inserir a data, o horário, o fornecedor, o tipo de material e a quantidade a ser
+entregue.<br>
+- O sistema deve exibir uma confirmação de sucesso ou erro ao final do processo.</p>
+<hr />
+<h3 id="rf02-validacao-de-capacidade-do-patio-e-docas"><strong>RF02</strong> – Validação de Capacidade do Pátio e Docas</h3>
+<p>O sistema deve validar se há espaço disponível no pátio e nas docas para confirmar um agendamento de
+entrega. Caso não haja espaço, o sistema deve sugerir um novo horário ou data para a entrega.</p>
+<p><strong>Justificativa:</strong><br />
+Evitar congestionamentos e falta de espaço, promovendo a otimização dos recursos físicos do CD.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- O sistema deve verificar automaticamente a disponibilidade de docas e espaço no pátio antes de
+confirmar o agendamento.<br>
+- Se não houver espaço, o sistema deve sugerir ao usuário novos horários possíveis para o
+agendamento.</p>
+<hr />
+<h3 id="rf03-visibilidade-em-tempo-real-de-capacidade"><strong>RF03</strong> – Visibilidade em Tempo Real de Capacidade</h3>
+<p>O sistema deve exibir em tempo real a capacidade atual das docas e do pátio, mostrando quais áreas estão
+ocupadas e quais estão disponíveis para novas entregas.</p>
+<p><strong>Justificativa:</strong><br />
+Facilitar o gerenciamento da ocupação do CD, permitindo decisões rápidas e assertivas sobre a logística do
+pátio e docas.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- A capacidade do pátio e das docas deve ser atualizada em tempo real, com um atraso máximo de 2
+segundos.<br>
+- O sistema deve mostrar visualmente a ocupação do pátio e docas.</p>
+<hr />
+<h3 id="rf04-notificacoes-automaticas"><strong>RF04</strong> – Notificações Automáticas</h3>
+<p>O sistema deve enviar notificações automáticas para os usuários responsáveis (equipe de recebimento,
+logística e suprimentos) sempre que houver alterações nos horários de entrega, cancelamentos ou qualquer
+mudança relevante.</p>
+<p><strong>Justificativa:</strong><br />
+Manter todos os envolvidos atualizados sobre mudanças de cronograma ajuda a reduzir erros e evitar
+impactos negativos no fluxo de trabalho.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- O sistema deve enviar notificações por e-mail ou SMS em caso de alterações de agendamento.<br>
+- O sistema deve permitir configurar quais eventos geram notificações e para quais usuários.</p>
+<hr />
+<h3 id="rf05-priorizacao-de-entregas"><strong>RF05</strong> – Priorização de Entregas</h3>
+<p>O sistema deve permitir que os usuários atribuam prioridades às entregas, com base na urgência e na
+importância dos materiais, para garantir que materiais críticos sejam recebidos de forma prioritária.</p>
+<p><strong>Justificativa:</strong><br />
+Priorizar entregas críticas assegura que a produção da fábrica não seja interrompida devido à falta de
+materiais essenciais.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- O usuário deve poder marcar entregas como "prioritárias" ao agendar.<br>
+- O sistema deve organizar a ordem de descarga com base nas prioridades atribuídas.</p>
+<hr />
+<h3 id="rf06-geracao-de-relatorios-de-utilizacao"><strong>RF06</strong> – Geração de Relatórios de Utilização</h3>
+<p>O sistema deve gerar relatórios periódicos sobre a utilização do pátio e das docas, incluindo métricas como
+tempo médio de espera dos caminhões, ociosidade das docas e número de entregas realizadas.</p>
+<p><strong>Justificativa:</strong><br />
+Esses relatórios permitem uma análise de desempenho do CD, ajudando na identificação de gargalos e na
+otimização das operações logísticas.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- O sistema deve gerar relatórios mensais e sob demanda.<br>
+- Os relatórios devem incluir dados sobre tempo de espera, número de caminhões atendidos e
+utilização do espaço.</p>
+<hr />
+<h3 id="rf07-definicao-de-janelas-de-horarios-permitidos"><strong>RF07</strong> – Definição de Janelas de Horários Permitidos</h3>
+<p>O sistema deve permitir a configuração de janelas de horário permitidas para entrega, respeitando o horário
+de funcionamento do CD, com a possibilidade de bloquear agendamentos fora do expediente ou solicitar
+aprovação especial.</p>
+<p><strong>Justificativa:</strong><br />
+Evitar custos extras com horas adicionais e garantir que o CD opere de maneira eficiente e dentro de seu
+horário regular de trabalho.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- O sistema deve bloquear automaticamente agendamentos fora das janelas de horário permitidas.<br>
+- O sistema deve solicitar aprovação especial para agendamentos fora do expediente.</p>
+<hr />
+<h3 id="rf08-reorganizacao-da-fila-de-entregas"><strong>RF08</strong> – Reorganização da Fila de Entregas</h3>
+<p>O sistema deve reorganizar a fila de entregas conforme as prioridades estabelecidas pelos usuários.
+Entregas com maior prioridade devem ser tratadas com maior urgência, e o sistema deve ajustar a ordem de
+descarregamento automaticamente.</p>
+<p><strong>Justificativa:</strong><br />
+Permitir uma melhor gestão das entregas com base em prioridades críticas garante que os recursos sejam
+alocados de forma eficiente, evitando impactos na produção.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- O sistema deve reorganizar a fila de descarregamento automaticamente com base na prioridade
+atribuída a cada entrega.<br>
+- O sistema deve permitir visualização da ordem de entrega reorganizada em tempo real.</p>
+<hr />
+<h3 id="rf09-relatorios-de-entregas-atrasadas-ou-fora-do-horario"><strong>RF09</strong> – Relatórios de Entregas Atrasadas ou Fora do Horário</h3>
+<p>O sistema deve gerar relatórios sobre entregas que ocorreram fora do horário agendado ou que chegaram
+com atraso, incluindo o impacto financeiro causado por horas extras ou outras medidas corretivas.</p>
+<p><strong>Justificativa:</strong><br />
+Esses relatórios fornecem visibilidade sobre os problemas operacionais e ajudam a identificar áreas que
+precisam de melhorias, além de fornecer informações valiosas para minimizar custos extras.</p>
+<p><strong>Critérios de Aceitação:</strong><br>
+- O sistema deve gerar relatórios mensais e sob demanda sobre entregas atrasadas ou fora do
+horário.<br>
+- Os relatórios devem incluir o impacto financeiro estimado, como custos de horas extras.</p>
+<hr />
+<h3 id="rf10-consulta-e-monitoramento-de-entregas-programadas"><strong>RF10</strong> – Consulta e Monitoramento de Entregas Programadas</h3>
+<p>O sistema deve permitir que os usuários consultem uma lista de todas as entregas programadas, com a
+possibilidade de visualizar o status de cada uma (pendente, em trânsito, entregue, atrasada, etc.) e
+acompanhar em tempo real.</p>
+<p><strong>Justificativa:</strong><br />
+Facilitar o monitoramento do fluxo de entregas permite uma melhor organização e controle do recebimento
+de materiais, evitando imprevistos e otimizando a gestão do CD.</p>
+<p><strong>Critérios de Aceitação:</strong> <br>
+- O sistema deve exibir uma lista de entregas programadas com o status atualizado em tempo real. <br>
+- O sistema deve permitir filtrar as entregas por status, fornecedor, data ou prioridade.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>
