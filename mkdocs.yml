@@ -5,8 +5,10 @@ theme:
     repo: fontawesome/brands/git-alt
   palette:
     scheme: default
-    primary: white
-    accent: orange
+    primary: orange
+    accent: purple
+  extra_css:
+    - stylesheets/extra.css
   font:
     text: "Roboto"
     code: "Roboto Mono"
@@ -19,6 +21,4 @@ nav:
     - Visão de Produto: requisitos/visao-de-produto.md
     - Requisitos Funcionais: requisitos/requisitos-funcionais.md
     - Requisitos Não Funcionais: requisitos/requisitos-nao-funcionais.md
-  - Documentação Funcional:
-    - Anexo: documentacao-funcional/documentacao-anexo.md
   - Macrocronograma de Implantação: macrocronograma/macrocronograma-implantacao.md
